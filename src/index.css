@@ -1,0 +1,35 @@
+@import "tailwindcss";
+/* @import "tailwindcss/preflight";
+@tailwind utilities; */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+@font-face {
+  font-family: "Bricolage";
+  src: url("./assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-bricolage: "Bricolage", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
+  --color-blue: #02012b;
+  --color-lightblue: #4656d9;
+  --color-grey: #25253f;
+  --color-lightgrey: #2f2f49;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-dm);
+  color: #d9d9de;
+}
