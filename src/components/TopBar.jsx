@@ -14,14 +14,14 @@ const TopBar = ({setUnits}) => {
   return (
     <div className={'flex items-center justify-between'}>
       <figure>
-        <img src={logo} alt="logo" className="w-40"/>
+        <img src={logo} alt="logo" className="w-30 sm:w-40"/>
       </figure>
-      <div className={'relative flex items-center justify-around bg-grey p-2 rounded-[10px] w-28 h-9 cursor-pointer'}
+      <div className={'relative flex items-center justify-around bg-grey p-1 sm:p-2 rounded-[10px] w-16 sm:w-28 h-9 cursor-pointer'}
       >
         <figure>
           <img src={unitsIcon} alt="settings" />
         </figure>
-        <p>Units</p>
+        <p className="hidden sm:block">Units</p>
         <figure>
             <img src={chooseIcon} alt="" onClick={() => openClose()} className={`${isOpen && 'rotate-180'} transition-transform duration-300`}/>
         </figure>

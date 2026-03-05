@@ -37,16 +37,16 @@ const Today = ({ className, weather, location }) => {
             <h1 className="text-6xl italic font-semibold">{temp}°</h1>
           </div>
         </div>
-        <div className="flex w-full pt-3 gap-3">
-          <div className="flex flex-col justify-between w-1/4 h-18 bg-grey rounded-[10px] p-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 w-full pt-3 gap-3">
+          <div className="flex flex-col justify-between h-18 bg-grey rounded-[10px] p-3">
             <p className="text-[10px]">Feels like</p>
             <div className="text-lg">{feels}°</div>
           </div>
-          <div className="flex flex-col justify-between w-1/4 h-18 bg-grey rounded-[10px] p-3">
+          <div className="flex flex-col justify-between h-18 bg-grey rounded-[10px] p-3">
             <p className="text-[10px]">Humidity</p>
             <div className="text-lg">{humidity}%</div>
           </div>
-          <div className="flex flex-col justify-between w-1/4 h-18 bg-grey rounded-[10px] p-3">
+          <div className="flex flex-col justify-between h-18 bg-grey rounded-[10px] p-3">
             <p className="text-[10px]">Wind</p>
             <div className="text-lg">
               {wind}{" "}
@@ -55,7 +55,7 @@ const Today = ({ className, weather, location }) => {
               </span>
             </div>
           </div>
-          <div className="flex flex-col justify-between w-1/4 h-18 bg-grey rounded-[10px] p-3">
+          <div className="flex flex-col justify-between h-18 bg-grey rounded-[10px] p-3">
             <p className="text-[10px]">Precipitation</p>
             <div className="text-lg">{precipitation} in</div>
           </div>

@@ -32,14 +32,14 @@ const Search = ({ setLatLong, setLocation }) => {
   return (
     <div
       className={
-        "flex flex-col items-center justify-around p-4 min-h-30 gap-8 mb-4"
+        "flex flex-col items-center justify-around xs:p-8 p-2 min-h-30 gap-4 sm:gap-8 mb-2"
       }
     >
-      <h1 className={"font-bricolage text-3xl md:text-4xl font-semibold"}>
+      <h1 className={"font-bricolage text-3xl md:text-4xl font-semibold text-center"}>
         How's the sky looking today?
       </h1>
-      <div className="w-full max-w-sm min-w-50">
-        <div className="relative flex items-center">
+      <div className="w-full max-w-80 min-w-50">
+        <div className="relative sx:flex-col sm:flex items-center">
           <img
             src={glass}
             alt="glass"
@@ -52,12 +52,12 @@ const Search = ({ setLatLong, setLocation }) => {
             onChange={(e) => setQuery(e.target.value)}
           />
 
-          <button
-            className="rounded-md bg-lightblue py-2 px-4 text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+          {/* <button
+            className="xs:w-full w-auto rounded-md bg-lightblue py-2 px-4 text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
             type="button"
           >
             Search
-          </button>
+          </button> */}
           {query && cities?.results && (
             <div className="absolute w-75 h-40 overflow-y-auto bg-grey top-10 rounded-[10px] p-1">
               {cities.results?.map((city) => (

@@ -7,8 +7,8 @@ function App() {
   const [tempUnits, setTempUnits] = useState("celsius");
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
-  const [city, setCity] = useState({name: "", country: "" })
-  const [weather, setWeather] = useState(null)
+  const [city, setCity] = useState({ name: "", country: "" });
+  const [weather, setWeather] = useState(null);
   const geoSetRef = useRef(false);
 
   function setLatLong(latValue, longValue) {
@@ -18,7 +18,7 @@ function App() {
   }
 
   function setLocation(city, country) {
-    setCity({name: city, country: country})
+    setCity({ name: city, country: country });
   }
 
   useEffect(() => {
@@ -32,13 +32,16 @@ function App() {
         async (position) => {
           setLat(position.coords.latitude);
           setLong(position.coords.longitude);
-          
+
           // Reverse geocode to get city and country
           const res = await fetch(
-        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`
+            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`,
           );
           const data = await res.json();
-          setLocation(data.address.city || data.address.town || "Unknown", data.address.country || "Unknown");
+          setLocation(
+            data.address.city || data.address.town || "Unknown",
+            data.address.country || "Unknown",
+          );
           geoSetRef.current = true; // Mark that geolocation has set location
         },
         (error) => {
@@ -57,8 +60,8 @@ function App() {
 
       const res = await fetch(tempUnits === "celsius" ? apiLink : apiLinkF);
       const data = await res.json();
-      console.log(data)
-      setWeather(data)
+      console.log(data);
+      setWeather(data);
     }
 
     getWeather(lat, long, tempUnits);
@@ -71,10 +74,10 @@ function App() {
   return (
     <>
       <div className="min-h-screen flex bg-blue">
-        <div className="w-full pl-16 pr-16 pt-8 pb-8 flex flex-col h-screen">
-          <TopBar setUnits={setUnits}/>
+        <div className="w-full pl-8 pr-8 sm:pl-16 sm:pr-16 pt-4 pb-4 flex flex-col h-full bg-blue">
+          <TopBar setUnits={setUnits} />
           <Search setLatLong={setLatLong} setLocation={setLocation} />
-          <Results className="flex-1" weather={weather} location={city}/>
+          <Results className="flex-1" weather={weather} location={city} />
         </div>
       </div>
     </>
