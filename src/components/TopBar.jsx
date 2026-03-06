@@ -12,7 +12,7 @@ const TopBar = ({setUnits}) => {
   }
 
   return (
-    <div className={'flex items-center justify-between'}>
+    <div className={'flex items-center justify-between mb-16 mt-4'}>
       <figure>
         <img src={logo} alt="logo" className="w-30 sm:w-40"/>
       </figure>

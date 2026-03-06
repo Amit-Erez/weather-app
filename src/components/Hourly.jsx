@@ -42,10 +42,10 @@ const Hourly = ({ className, weather }) => {
 
   return (
     <div
-      className={`bg-grey rounded-[10px] p-2 flex flex-col justify-between h-97 overflow-hidden ${className}`}
+      className={`bg-grey rounded-[10px] h-130 p-2 flex flex-col justify-between overflow-hidden ${className}`}
     >
       <div className="flex flex-1 min-h-0 flex-col">
-        <div className="flex justify-between items-center p-2 rounded-[10px]">
+        <div className="flex justify-between items-center p-2 rounded-[10px] ">
           <div className="font-semibold mr-2">Hourly</div>
           <div
             className={

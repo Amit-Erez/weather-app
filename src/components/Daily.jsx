@@ -20,7 +20,7 @@ const Daily = ({ className, weather }) => {
           {days.map((day, index) => (
             <div
               key={day}
-              className="h-24 min-[640px]:w-14 min-[1000px]:w-20 bg-grey rounded-[10px] flex flex-col items-center justify-center pt-2 pb-2 text-sm"
+              className="h-24 min-[640px]:w-14 min-[1080px]:w-20 bg-grey rounded-[10px] flex flex-col items-center justify-center pt-2 pb-2 text-sm"
             >
               <p>{returnDay(index)}</p>
               <img

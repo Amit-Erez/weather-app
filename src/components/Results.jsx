@@ -20,15 +20,15 @@ const Results = ({ className, weather, location }) => {
 
   return (
     <div
-      className={`${className} grid grid-cols-1 min-[812px]:grid-cols-[2fr_1fr] gap-4 p-2`}
+      className={`${className} grid grid-cols-1 min-[920px]:grid-cols-[2fr_1fr] min-[920px]:grid-rows-[380px_1fr] gap-4 p-12`}
     >
       <Today
-        className="md:col-start-1"
+        className="min-[920px]:col-start-1"
         weather={weather}
         location={location}
       />
-      <Daily className="md:col-start-1" weather={weather} />
-      <Hourly className="md:col-start-2 md:row-start-1 md:row-span-2" weather={weather} />
+      <Daily className="min-[920px]:col-start-1" weather={weather} />
+      <Hourly className="min-[920px]:col-start-2 min-[920px]:row-start-1 min-[920px]:row-span-2" weather={weather} />
     </div>
   );
 };

@@ -19,9 +19,9 @@ const Today = ({ className, weather, location }) => {
 
   return (
     <>
-      <div className={`${className} rounded-3xl`}>
+      <div className={`${className} rounded-3xl h-full flex flex-col`}>
         <div
-          className="h-40 w-full bg-cover bg-center rounded-[10px] flex items-center justify-between pl-8 pr-10"
+          className="h-70 w-full bg-cover bg-center rounded-[10px] flex items-center justify-between pl-8 pr-10"
           style={{ backgroundImage: `url(${sky})` }}
         >
           <div>
