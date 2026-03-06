@@ -73,11 +73,11 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen flex bg-blue">
-        <div className="w-full pl-8 pr-8 sm:pl-16 sm:pr-16 pt-4 pb-4 flex flex-col h-full bg-blue">
+      <div className="min-h-screen flex flex-col items-center bg-blue">
+        <div className="w-full max-w-6xl pl-8 pr-8 sm:pl-16 sm:pr-16 pt-4 pb-4 flex flex-col flex-1 min-h-0 bg-blue">
           <TopBar setUnits={setUnits} />
           <Search setLatLong={setLatLong} setLocation={setLocation} />
-          <Results className="flex-1" weather={weather} location={city} />
+          <Results className="flex-1 min-h-0" weather={weather} location={city} />
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import sky from "../assets/images/bg-today-large.svg";
-import sun from "../assets/images/icon-sunny.webp";
+import { getWeatherIcon } from "../hooks/WeatherCode";
 
 const Today = ({ className, weather, location }) => {
   const temp = Math.floor(weather?.current?.temperature_2m);
@@ -32,7 +32,7 @@ const Today = ({ className, weather, location }) => {
           </div>
           <div className="flex justify-center items-center">
             <figure>
-              <img src={sun} alt="sun" className="w-20" />
+              <img src={getWeatherIcon(weather.current.weather_code)} alt="sun" className="w-20" />
             </figure>
             <h1 className="text-6xl italic font-semibold">{temp}°</h1>
           </div>

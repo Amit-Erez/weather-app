@@ -8,7 +8,7 @@ const Results = ({ className, weather, location }) => {
   if (!weather)
     return (
       <div
-        className={`${className} relative grid grid-cols-[2fr_1fr] grid-rows-[2fr_1fr] gap-4 p-2 bg-grey rounded-2xl animate-pulse`}
+        className={`${className} relative h-full w-full bg-grey rounded-2xl animate-pulse border-2`}
       >
         <img
           src={loading}
@@ -20,15 +20,15 @@ const Results = ({ className, weather, location }) => {
 
   return (
     <div
-      className={`${className} grid md:grid-cols-[2fr_1fr] md:grid-rows-[2fr_1fr] grid-cols-1 grid-rows-3 gap-4 p-2`}
+      className={`${className} grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4 p-2`}
     >
       <Today
-        className="md:col-1 md:row-1"
+        className="md:col-start-1"
         weather={weather}
         location={location}
       />
-      <Daily className="md:col-1 md:row-2" weather={weather} />
-      <Hourly className="md:col-2 md:row-span-2" weather={weather} />
+      <Daily className="md:col-start-1" weather={weather} />
+      <Hourly className="md:col-start-2 md:row-start-1 md:row-span-2" weather={weather} />
     </div>
   );
 };
