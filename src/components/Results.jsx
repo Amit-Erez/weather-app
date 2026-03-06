@@ -20,7 +20,7 @@ const Results = ({ className, weather, location }) => {
 
   return (
     <div
-      className={`${className} grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4 p-2`}
+      className={`${className} grid grid-cols-1 min-[812px]:grid-cols-[2fr_1fr] gap-4 p-2`}
     >
       <Today
         className="md:col-start-1"

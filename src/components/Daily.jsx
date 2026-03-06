@@ -15,7 +15,7 @@ const Daily = ({ className, weather }) => {
   return (
     <div className={`h-full ${className}`}>
       <div className="flex flex-col h-full w-full">
-        <div>Daily forecast</div>
+        <div className="font-semibold">Daily forecast</div>
         <div className="grid grid-cols-3 min-[420px]:grid-cols-4 min-[420px]:grid-rows-2 sm:flex sm:justify-between sm:gap-3 gap-3 mt-1">
           {days.map((day, index) => (
             <div

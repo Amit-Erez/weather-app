@@ -55,8 +55,8 @@ function App() {
     if (!lat || !long) return;
 
     async function getWeather(lat, long, tempUnits) {
-      const apiLink = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m,wind_speed_10m,apparent_temperature,precipitation,rain,snowfall,weather_code,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,precipitation&timezone=auto`;
-      const apiLinkF = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m,wind_speed_10m,apparent_temperature,precipitation,rain,snowfall,weather_code,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,precipitation&timezone=auto&temperature_unit=fahrenheit&wind_speed_unit=mph`;
+      const apiLink = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m,wind_speed_10m,apparent_temperature,precipitation,rain,snowfall,weather_code,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,precipitation,weather_code&timezone=auto`;
+      const apiLinkF = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m,wind_speed_10m,apparent_temperature,precipitation,rain,snowfall,weather_code,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,precipitation,weather_code&timezone=auto&temperature_unit=fahrenheit&wind_speed_unit=mph`;
 
       const res = await fetch(tempUnits === "celsius" ? apiLink : apiLinkF);
       const data = await res.json();

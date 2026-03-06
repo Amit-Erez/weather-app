@@ -13,8 +13,8 @@ import storm from "../assets/images/icon-storm.webp"
   if (code === 2) return partCloud;
   if (code === 3) return overCast;
   if (code === 45) return fog;
-  if (51 <= code <= 57) return drizzle;
-  if (61 <= code <= 67) return rainy;
-  if (71 <= code <= 77) return snow;
-  if (80 <= code <= 81 || code === 95) return storm;
+  if (51 <= code && code <= 57) return drizzle;
+  if (61 <= code && code <= 67) return rainy;
+  if (71 <= code && code <= 77) return snow;
+  if (80 <= code && code <= 81 || code === 95) return storm;
 }

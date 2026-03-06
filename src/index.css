@@ -27,6 +27,19 @@
   --color-lightgrey: #2f2f49;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f2f49;
+  border-radius: 9999px;
+}
+
 body {
   margin: 0;
   padding: 0;
